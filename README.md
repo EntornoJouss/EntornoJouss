@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/ee4a5e13-ca63-48ce-a705-6dc6cf783bb3)
+
 # ✨👑 Data Queen | Joussettef 💜🌷  
 
 🌸 **Ingeniera en Control y Gestión | Analista de Datos | Científica de Datos en formación**  
