@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ee4a5e13-ca63-48ce-a705-6dc6cf783bb3)
+[![image](https://github.com/user-attachments/assets/ee4a5e13-ca63-48ce-a705-6dc6cf783bb3)](https://github.com/EntornoJouss/EntornoJouss/blob/main/Gra%CC%81ficas_Jousseteff_Mockup_Profesional-33.jpg?raw=true)
 
 # ✨👑 Data Queen | Joussettef 💜🌷  
 
