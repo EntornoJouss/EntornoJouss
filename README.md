@@ -1,16 +1,31 @@
-## Hi there 👋
+# ✨👑 Data Queen | Joussettef 💜🌷  
 
-<!--
-**EntornoJouss/EntornoJouss** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🌸 **Ingeniera en Control y Gestión | Analista de Datos | Científica de Datos en formación**  
+📊 Transformando números en insights y datos en decisiones con un toque de elegancia.  
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🎀 Habilidades:
+- 💻✨ Python (Pandas, NumPy, Scikit-Learn)
+- 📊🎨 SQL para análisis de datos
+- 🌈📈 Power BI & Tableau para visualización
+- 🧠💡 Machine Learning & Estadística
+- 🏛️📋 Gestión y Control de Procesos  
+
+---
+
+## 🌟 Proyectos Destacados:
+- 🌿 [📊 Análisis de Hepatitis C](#)  
+- 🍀 [📈 Predicción de Ventas](#)  
+- 💎 [📊 Dashboard en Power BI](#)  
+
+---
+
+## 💌 Conéctate conmigo:
+💌 [Email](mailto:joussettef.ch@gmail.com)  
+💼 [LinkedIn](https://www.linkedin.com/in/joussettef-chavez-aguilar/)  
+📂 **Mi Portafolio:** (¡Próximamente!)  
+
+---
+
+🌷✨ _Este perfil está en constante evolución mientras aprendo y creo nuevos proyectos. ¡Gracias por visitarlo!_  
