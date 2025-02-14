@@ -4,7 +4,7 @@
 # ✨👑 Data Queen | Joussettef 💜🌷  
 
 🌸 **Ingeniera en Control y Gestión | Analista de Datos | Científica de Datos en formación**  
-📊 Transformando números en insights y datos en decisiones  
+📊 Transformando datos en decisiones  
 
 ---
 
