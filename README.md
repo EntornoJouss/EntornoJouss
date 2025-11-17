@@ -1,7 +1,7 @@
 ![Gráficas_Jousseteff_Mockup_Profesional-33](https://github.com/user-attachments/assets/48625631-b7a7-4a7e-9483-9f78cbe6af7d)
 
 
-# ✨👑 Data Queen | Joussettef 💜🌷  
+# ✨👑 Joussettef 💜🌷  
 
 🌸 **Ingeniera en Control y Gestión | Analista de Datos | Científica de Datos**  
 📊 Transformando datos en decisiones  
