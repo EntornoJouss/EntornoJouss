@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import ThemeToggle from "./theme-toggle"
 
 export default function Navigation({ onOpenQuote }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -53,10 +54,8 @@ export default function Navigation({ onOpenQuote }) {
                 </a>
               ),
             )}
+            <ThemeToggle />
           </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4"></div>
 
           {/* Mobile menu button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
@@ -90,6 +89,9 @@ export default function Navigation({ onOpenQuote }) {
                 </a>
               ),
             )}
+            <div className="px-4 py-2">
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </div>
