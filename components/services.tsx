@@ -54,7 +54,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 justify-items-center">
           {services.map((service, index) => {
             const Icon = service.icon
             const colorClass = {
@@ -72,7 +72,7 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className={`fade-in fade-in-delay-${index === 0 ? "1" : index === 1 ? "2" : index === 2 ? "3" : index === 3 ? "4" : "5"} card-float`}
+                className={`fade-in fade-in-delay-${index === 0 ? "1" : index === 1 ? "2" : index === 2 ? "3" : index === 3 ? "4" : "5"} card-float w-full max-w-sm`}
               >
                 <div className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-300 h-full overflow-hidden">
                   {/* Gradient background */}
