@@ -13,8 +13,12 @@ export const metadata: Metadata = {
     "Impulsando la región con diseño y tecnología. Servicios de diseño, marketing, publicidad y consultoría empresarial.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/logo-cayumanque.png", type: "image/png" },
+    ],
+    apple: "/logo-cayumanque.png",
+    shortcut: "/favicon.png",
   },
 }
 
