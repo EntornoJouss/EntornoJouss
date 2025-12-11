@@ -65,9 +65,9 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-green rounded-3xl transform -rotate-6" />
               <div className="relative bg-card rounded-3xl p-8 border border-border">
                 <img
-                  src="/agencia-digital-creativa-moderno.jpg"
-                  alt="Agencia de Diseño Cayumanque"
-                  className="w-full h-80 rounded-2xl object-cover"
+                  src="/cayumanque-team-illustration.png"
+                  alt="Equipo Cayumanque - Diseño y Tecnología"
+                  className="w-full h-auto rounded-2xl"
                 />
               </div>
             </div>
