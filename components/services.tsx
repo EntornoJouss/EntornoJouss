@@ -47,12 +47,14 @@ export default function Services() {
   ]
 
   return (
-    <section id="servicios" className="w-full py-24 bg-background">
+    <section id="servicios" className="w-full py-16 sm:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Nuestros Servicios</h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+        <div className="text-center mb-10 sm:mb-16 fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
+            Nuestros Servicios
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
             Integran diseño, estrategia y visión empresarial para impulsar la digitalización y el posicionamiento de
             negocios y empresas desde la región de Ñuble al país. Desarrollamos páginas web efectivas, construimos
             Identidad Visual Corporativa coherente y profesional, implementamos estrategias de Marketing que fortalecen
@@ -63,7 +65,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
           {services.map((service, index) => {
             const Icon = service.icon
             const colorClass = {
@@ -83,7 +85,7 @@ export default function Services() {
                 key={service.id}
                 className={`fade-in fade-in-delay-${index === 0 ? "1" : index === 1 ? "2" : index === 2 ? "3" : index === 3 ? "4" : "5"} card-float w-full max-w-sm`}
               >
-                <div className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-300 h-full overflow-hidden">
+                <div className="group relative bg-card rounded-2xl p-6 sm:p-8 border border-border hover:border-primary/50 transition-all duration-300 h-full overflow-hidden">
                   {/* Gradient background */}
                   <div
                     className={`absolute inset-0 ${bgColor} opacity-0 group-hover:opacity-100 transition-all duration-300`}
@@ -92,11 +94,11 @@ export default function Services() {
                   {/* Content */}
                   <div className="relative z-10">
                     <div
-                      className={`${bgColor} inline-flex p-4 rounded-xl mb-6 group-hover:scale-110 transition-transform`}
+                      className={`${bgColor} inline-flex p-3 sm:p-4 rounded-xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform`}
                     >
-                      <Icon className={`${colorClass} w-6 h-6`} />
+                      <Icon className={`${colorClass} w-5 h-5 sm:w-6 sm:h-6`} />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors text-justify">

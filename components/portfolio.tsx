@@ -57,22 +57,22 @@ export default function Portfolio() {
   }
 
   return (
-    <section id="portafolio" className="w-full py-24 bg-muted/30 relative">
+    <section id="portafolio" className="w-full py-16 sm:py-24 bg-muted/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-center items-center gap-4 mb-16 fade-in text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">Portafolio</h2>
-          <p className="text-xl text-muted-foreground">Proyectos que hemos desarrollado con pasión y creatividad</p>
+        <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 mb-10 sm:mb-16 fade-in text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">Portafolio</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground px-2">
+            Proyectos que hemos desarrollado con pasión y creatividad
+          </p>
         </div>
 
         <div className="relative">
-          {/* Grid de 6 imágenes */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {portfolioSlides[currentSlide].map((item, index) => (
               <div
                 key={item.id}
-                className={`fade-in fade-in-delay-${(index % 3) + 1} group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 aspect-square`}
+                className={`fade-in fade-in-delay-${(index % 3) + 1} group relative overflow-hidden rounded-xl sm:rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 aspect-square`}
               >
-                {/* Image */}
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src={item.image || "/placeholder.svg"}
@@ -80,14 +80,12 @@ export default function Portfolio() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
 
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 translate-y-6 group-hover:translate-y-0 transition-all duration-300">
+                <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-4 md:p-6 translate-y-6 group-hover:translate-y-0 transition-all duration-300">
                   <div className="text-white opacity-0 group-hover:opacity-100 transition-all">
-                    <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>
+                    <h3 className="text-sm sm:text-base md:text-xl font-bold line-clamp-2">{item.title}</h3>
                   </div>
                 </div>
               </div>
@@ -97,29 +95,31 @@ export default function Portfolio() {
           <button
             onClick={prevSlide}
             disabled={isAnimating}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-primary text-primary-foreground rounded-full p-3 shadow-lg hover:bg-primary/90 transition-all disabled:opacity-50"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-12 bg-primary text-primary-foreground rounded-full p-2 sm:p-3 shadow-lg hover:bg-primary/90 transition-all disabled:opacity-50 z-10"
             aria-label="Anterior"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             onClick={nextSlide}
             disabled={isAnimating}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-primary text-primary-foreground rounded-full p-3 shadow-lg hover:bg-primary/90 transition-all disabled:opacity-50"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-12 bg-primary text-primary-foreground rounded-full p-2 sm:p-3 shadow-lg hover:bg-primary/90 transition-all disabled:opacity-50 z-10"
             aria-label="Siguiente"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
           {portfolioSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "w-12 bg-primary" : "w-3 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+              className={`h-2 sm:h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? "w-8 sm:w-12 bg-primary"
+                  : "w-2 sm:w-3 bg-muted-foreground/30 hover:bg-muted-foreground/50"
               }`}
               aria-label={`Ir a página ${index + 1}`}
             />

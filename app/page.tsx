@@ -9,13 +9,15 @@ import About from "@/components/about"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import QuoteModal from "@/components/quote-modal"
+import PuzzleGame from "@/components/puzzle-game"
 
 export default function Home() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
+  const [showPuzzleGame, setShowPuzzleGame] = useState(false)
 
   return (
     <main className="w-full">
-      <Navigation onOpenQuote={() => setShowQuoteModal(true)} />
+      <Navigation onOpenQuote={() => setShowQuoteModal(true)} onOpenPuzzle={() => setShowPuzzleGame(true)} />
       <Hero />
       <Services />
       <Portfolio />
@@ -24,6 +26,7 @@ export default function Home() {
       <Footer />
 
       {showQuoteModal && <QuoteModal onClose={() => setShowQuoteModal(false)} />}
+      {showPuzzleGame && <PuzzleGame onClose={() => setShowPuzzleGame(false)} />}
     </main>
   )
 }

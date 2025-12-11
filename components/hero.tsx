@@ -78,20 +78,20 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 w-full">
           <div className="flex flex-col items-start max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 leading-tight animate-title">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-1 sm:mb-2 leading-tight animate-title">
               Agencia
             </h1>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-primary mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(45,80,22,0.8)]">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-black text-primary mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(45,80,22,0.8)]">
               Cayumanque
             </h1>
 
-            <div className="mb-8 fade-in-delay-1 h-[120px] flex items-start relative w-full">
+            <div className="mb-4 sm:mb-8 fade-in-delay-1 h-[80px] sm:h-[100px] lg:h-[120px] flex items-start relative w-full">
               {ROTATING_PHRASES.map((phrase, index) => (
                 <p
                   key={index}
-                  className="absolute top-0 left-0 text-2xl sm:text-3xl lg:text-4xl text-gray-900 font-bold leading-tight drop-shadow-md transition-opacity duration-500"
+                  className="absolute top-0 left-0 text-xl sm:text-2xl lg:text-4xl text-gray-900 font-bold leading-tight drop-shadow-md transition-opacity duration-500"
                   style={{
                     opacity: currentPhrase === index ? 1 : 0,
                   }}
@@ -101,23 +101,23 @@ export default function Hero() {
               ))}
             </div>
 
-            <p className="text-lg sm:text-xl text-gray-800 mb-10 fade-in-delay-1 leading-relaxed font-semibold drop-shadow-md">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 sm:mb-10 fade-in-delay-1 leading-relaxed font-semibold drop-shadow-md">
               Diseño • Marketing • Branding • Productos Corporativos
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 fade-in-delay-2">
+            <div className="flex flex-col sm:flex-row gap-4 fade-in-delay-2 w-full sm:w-auto">
               <button
                 onClick={() => setShowQuoteModal(true)}
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-lg"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-accent text-accent-foreground rounded-full font-bold hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto"
                 onMouseEnter={() => setHoveredButton(true)}
                 onMouseLeave={() => setHoveredButton(false)}
               >
                 Cotizar
-                <ArrowRight className={`ml-2 transition-transform ${hoveredButton ? "translate-x-1" : ""}`} size={22} />
+                <ArrowRight className={`ml-2 transition-transform ${hoveredButton ? "translate-x-1" : ""}`} size={20} />
               </button>
               <a
                 href="#portafolio"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white rounded-full font-bold border-2 border-white/30 hover:bg-white/20 transition-all backdrop-blur-sm text-lg"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/10 text-white rounded-full font-bold border-2 border-white/30 hover:bg-white/20 transition-all backdrop-blur-sm text-base sm:text-lg w-full sm:w-auto"
               >
                 Ver Portafolio
               </a>
@@ -125,7 +125,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
           {SLIDES.map((_, index) => (
             <button
               key={index}
@@ -134,7 +134,7 @@ export default function Hero() {
               aria-label={`Go to slide ${index + 1}`}
             >
               <div
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                   currentSlide === index ? "bg-accent scale-125" : "bg-white/40 hover:bg-white/60"
                 }`}
               />

@@ -2,10 +2,11 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Puzzle } from "lucide-react"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
-export default function Navigation({ onOpenQuote }) {
+export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
@@ -53,6 +54,15 @@ export default function Navigation({ onOpenQuote }) {
                 </a>
               ),
             )}
+            <Button
+              onClick={onOpenPuzzle}
+              size="sm"
+              variant="outline"
+              className="border-[#8B4513] text-[#8B4513] hover:bg-[#8B4513] hover:text-white bg-transparent"
+            >
+              <Puzzle className="h-4 w-4 mr-2" />
+              Jugar
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -87,6 +97,16 @@ export default function Navigation({ onOpenQuote }) {
                 </a>
               ),
             )}
+            <button
+              onClick={() => {
+                onOpenPuzzle()
+                setIsOpen(false)
+              }}
+              className="w-full text-left px-4 py-2 text-[#8B4513] hover:bg-[#8B4513]/10 transition-colors flex items-center gap-2"
+            >
+              <Puzzle className="h-4 w-4" />
+              Jugar Puzzle
+            </button>
           </div>
         )}
       </div>
