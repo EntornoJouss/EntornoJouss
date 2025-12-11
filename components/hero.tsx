@@ -1,75 +1,123 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ArrowRight } from "lucide-react"
 import QuoteModal from "./quote-modal"
+import Image from "next/image"
+
+const SLIDES = [
+  {
+    image: "/hero-branding-logos.png",
+    title: "Branding Profesional",
+  },
+  {
+    image: "/hero-forest-nature.png",
+    title: "Creatividad sin Límites",
+  },
+  {
+    image: "/hero-portfolio-grid.png",
+    title: "Diseño",
+  },
+]
+
+const ROTATING_PHRASES = ["Creatividad sin Límites", "Branding profesional", "Diseño", "Te asesoramos en tu proyecto"]
 
 export default function Hero() {
   const [hoveredButton, setHoveredButton] = useState(false)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [parallaxOffset, setParallaxOffset] = useState(0)
+  const [currentPhrase, setCurrentPhrase] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % SLIDES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const phraseTimer = setInterval(() => {
+      setCurrentPhrase((prev) => (prev + 1) % ROTATING_PHRASES.length)
+    }, 3000)
+    return () => clearInterval(phraseTimer)
+  }, [])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY * 0.5
+      setParallaxOffset(offset)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <>
-      <section
-        id="hero"
-        className="forest-bg relative w-full min-h-screen flex items-center justify-center pt-16 overflow-hidden"
-        style={{
-          background: "linear-gradient(135deg, #2D5016 0%, #4A7C2C 50%, #3D6B23 100%)",
-          backgroundImage: 'url("/forest-canopy-misty-background.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        {/* Forest overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
-
-        <div className="absolute inset-0 opacity-15 overflow-hidden">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-          <div
-            className="absolute -bottom-20 right-20 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
-            style={{ animationDelay: "2s" }}
-          />
-          <div
-            className="absolute top-1/2 left-1/3 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-30"
-            style={{ animation: "float 6s ease-in-out infinite" }}
-          />
+      <section id="hero" className="relative w-full min-h-screen flex items-center pt-16 overflow-hidden">
+        <div className="absolute inset-0">
+          {SLIDES.map((slide, index) => (
+            <div
+              key={index}
+              className="absolute inset-0 transition-opacity duration-1000"
+              style={{
+                opacity: currentSlide === index ? 1 : 0,
+                transform: `translateY(${parallaxOffset}px) scale(1.1)`,
+                transition: "opacity 1000ms ease-in-out",
+              }}
+            >
+              <Image
+                src={slide.image || "/placeholder.svg"}
+                alt={slide.title}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50" />
+            </div>
+          ))}
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="flex flex-col items-center gap-6 text-center">
-            <div className="fade-in">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-2 leading-tight animate-title">
-                Agencia Digital
-              </h1>
-              <h2
-                className="text-8xl sm:text-8xl lg:text-9xl font-black mb-3 animate-cayumanque"
-                style={{ color: "#2D5016" }}
-              >
-                Cayumanque
-              </h2>
-              <p className="text-xl sm:text-2xl text-white/95 mb-0 font-semibold animate-title-delay-2">
-                Diseño • Marketing • Branding • Productos Corporativos
-              </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 w-full">
+          <div className="flex flex-col items-start max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 leading-tight animate-title">
+              Agencia
+            </h1>
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-primary mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(45,80,22,0.8)]">
+              Cayumanque
+            </h1>
+
+            <div className="mb-8 fade-in-delay-1 h-[120px] flex items-start relative w-full">
+              {ROTATING_PHRASES.map((phrase, index) => (
+                <p
+                  key={index}
+                  className="absolute top-0 left-0 text-2xl sm:text-3xl lg:text-4xl text-gray-900 font-bold leading-tight drop-shadow-md transition-opacity duration-500"
+                  style={{
+                    opacity: currentPhrase === index ? 1 : 0,
+                  }}
+                >
+                  {phrase}
+                </p>
+              ))}
             </div>
 
-            <p className="text-lg text-white/90 mt-4 max-w-2xl fade-in fade-in-delay-1">
-              Transformamos tus ideas en experiencias digitales memorables.
+            <p className="text-lg sm:text-xl text-gray-800 mb-10 fade-in-delay-1 leading-relaxed font-semibold drop-shadow-md">
+              Diseño • Marketing • Branding • Productos Corporativos
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center fade-in fade-in-delay-2 mt-6">
+            <div className="flex flex-col sm:flex-row gap-6 fade-in-delay-2">
               <button
                 onClick={() => setShowQuoteModal(true)}
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold hover:shadow-lg transition-all transform hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-lg"
                 onMouseEnter={() => setHoveredButton(true)}
                 onMouseLeave={() => setHoveredButton(false)}
               >
                 Cotizar
-                <ArrowRight className={`ml-2 transition-transform ${hoveredButton ? "translate-x-1" : ""}`} size={20} />
+                <ArrowRight className={`ml-2 transition-transform ${hoveredButton ? "translate-x-1" : ""}`} size={22} />
               </button>
               <a
                 href="#portafolio"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/20 text-white rounded-full font-bold border border-white/30 hover:bg-white/30 transition-all backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white rounded-full font-bold border-2 border-white/30 hover:bg-white/20 transition-all backdrop-blur-sm text-lg"
               >
                 Ver Portafolio
               </a>
@@ -77,7 +125,25 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+          {SLIDES.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className="group relative"
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              <div
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? "bg-accent scale-125" : "bg-white/40 hover:bg-white/60"
+                }`}
+              />
+              {currentSlide === index && (
+                <div className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75" />
+              )}
+            </button>
+          ))}
+        </div>
       </section>
 
       <QuoteModal isOpen={showQuoteModal} onClose={() => setShowQuoteModal(false)} />

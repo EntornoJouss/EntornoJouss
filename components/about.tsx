@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 export default function About() {
   return (
@@ -13,16 +13,26 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Sobre Cayumanque</h2>
-            <div className="space-y-4 text-lg text-muted-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Sobre Nosotros</h2>
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed text-justify">
               <p>
-                Somos una agencia digital apasionada por la creatividad y la innovación. Nuestro compromiso es transformar ideas audaces en soluciones digitales que impulsen el crecimiento de negocios.
+                En Agencia Cayumanque somos un estudio de diseño y tecnología especializado en impulsar el crecimiento
+                de negocios y empresas a través de soluciones visuales modernas, funcionales y orientadas al
+                posicionamiento. Nuestra misión es ayudar a emprendedores y organizaciones de Ñuble y Chile a destacar
+                en un entorno competitivo, combinando diseño estratégico, comunicación clara y herramientas digitales
+                que fortalecen su presencia en todos sus canales.
               </p>
               <p>
-                Combinamos el poder del diseño estratégico, la tecnología moderna y la consultoría empresarial para crear experiencias que dejan un impacto duradero.
+                Creemos en el diseño como un recurso empresarial clave: una marca bien construida comunica confianza,
+                orden, profesionalismo y visión. Por eso desarrollamos identidades visuales sólidas, sistemas gráficos
+                coherentes, estrategias de marketing efectivas y páginas web optimizadas para conectar con clientes
+                reales.
               </p>
               <p>
-                Cada proyecto es una oportunidad para innovar, colaborar y demostrar que el buen diseño y la estrategia digital son catalizadores del éxito empresarial.
+                Nuestro equipo trabaja con enfoque consultivo, entendiendo la esencia de cada negocio para ofrecer
+                soluciones que generen valor, diferencien y aporten resultados concretos. Desde la creación de marcas
+                hasta la digitalización completa de tu empresa, estamos aquí para acompañarte en cada etapa y llevar tu
+                proyecto al siguiente nivel.
               </p>
             </div>
 

@@ -7,36 +7,40 @@ export default function Services() {
     {
       id: 1,
       title: "Diseño",
-      description: "Creamos identidades visuales únicas y diseños que capturan la esencia de tu marca.",
+      description:
+        "Creamos identidades visuales únicas y sistemas gráficos que fortalecen la presencia de tu empresa. Desde logotipos, paletas cromáticas, tipografías, piezas corporativas y aplicaciones visuales, hasta la creación de universos gráficos completos, construimos una identidad coherente que te permita competir, diferenciarte y posicionarte con claridad en tu mercado.",
       icon: Palette,
       color: "primary",
     },
     {
       id: 2,
       title: "Marketing",
-      description: "Estrategias digitales que conectan tu marca con tu audiencia de forma efectiva.",
+      description:
+        "Estrategias digitales que conectan tu marca con tu audiencia de forma efectiva. Desarrollamos planes de marketing que combinan contenido, diseño y comunicación estratégica para lograr alcance real. Optimizamos la presencia de tu marca en redes sociales, creamos campañas digitales alineadas a tus objetivos y generamos mensajes que impactan en el público correcto. Trabajamos con un enfoque orientado a resultados: aumentar visibilidad, generar interacción y fortalecer el posicionamiento digital de tu empresa.",
       icon: Trending2,
       color: "secondary",
     },
     {
       id: 3,
       title: "Publicidad",
-      description: "Campañas impactantes que generan engagement y convierten visitas en clientes.",
+      description:
+        "Tu marca tiene un potencial enorme cuando sabe cómo mostrarse, crecer y expandir su alcance. La inversión en diseño publicitario te permite comunicar de forma clara, atractiva y profesional en todos tus canales. Creamos piezas gráficas para campañas, banners, contenido promocional, material para redes sociales, anuncios y comunicación comercial. Nuestro objetivo es potenciar tu presencia, ampliar tu audiencia y ayudar a que tu empresa destaque en un entorno competitivo, aumentando el reconocimiento y el valor percibido de tu marca.",
       icon: Megaphone,
       color: "accent",
     },
     {
       id: 4,
-      title: "Consultoría",
-      description: "Asesoramiento empresarial para optimizar tu presencia digital y crecimiento.",
+      title: "Asesoría Digital / Empresarial",
+      description:
+        "Diseñamos y guiamos tu proyecto para que tengas soluciones digitales que ordenan, estructuran y profesionalizan tu empresa. Ofrecemos acompañamiento especializado para fortalecer tu marca desde adentro.",
       icon: Briefcase,
       color: "primary",
     },
     {
       id: 5,
-      title: "Páginas Web Económicas",
+      title: "Página Web",
       description:
-        "Sitios simples, modernos y rápidos para emprendedores. Incluyen secciones básicas, WhatsApp directo y formulario de contacto. Podemos configurar para que recibas cotizaciones directo a tu correo, integrar mapas, agregar catálogo básico y optimizar para móviles. Nos encargamos de todo por ti: diseño, textos, configuración y publicación. Te entregamos la página lista para usar.",
+        "Sitios modernos, rápidos y funcionales para emprendedores, empresas y organizaciones. Creamos páginas web o software que se adaptan a tus necesidades, que pueden incluir: secciones básicas esenciales, botón de WhatsApp directo, formulario de contacto funcional, configuración para recibir cotizaciones directo a tu correo, integración de mapas, catálogo básico de productos o servicios, y software internos. Nos encargamos de todo por ti: diseño, redacción de textos, configuración, optimización y publicación. Te entregamos una página lista para usar desde el primer día.",
       icon: Globe,
       color: "secondary",
     },
@@ -48,8 +52,13 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Nuestros Servicios</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Soluciones completas para transformar tu visión empresarial en realidad digital
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Integran diseño, estrategia y visión empresarial para impulsar la digitalización y el posicionamiento de
+            negocios y empresas desde la región de Ñuble al país. Desarrollamos páginas web efectivas, construimos
+            Identidad Visual Corporativa coherente y profesional, implementamos estrategias de Marketing que fortalecen
+            la presencia de tu marca y ofrecemos Consultoría como guía para el desarrollo de tu proyecto digital.
+            Nuestro enfoque se centra en crear soluciones que aumenten la visibilidad, mejoren la competitividad y
+            permitan que tu negocio destaque en un mercado cada vez más digital y exigente.
           </p>
         </div>
 
