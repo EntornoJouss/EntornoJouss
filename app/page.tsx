@@ -27,6 +27,10 @@ export default function Home() {
 
       {showQuoteModal && <QuoteModal onClose={() => setShowQuoteModal(false)} />}
       {showPuzzleGame && <PuzzleGame onClose={() => setShowPuzzleGame(false)} />}
+
+      <div className="w-full py-4 bg-[#059669] text-white text-center">
+        <p className="text-sm sm:text-base font-bold">Hecho por Agencia Cayumanque</p>
+      </div>
     </main>
   )
 }
