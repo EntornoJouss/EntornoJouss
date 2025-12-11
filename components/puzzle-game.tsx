@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { X, Shuffle, Trophy } from "lucide-react"
+import Image from "next/image"
 
 interface PuzzlePiece {
   id: number
@@ -24,10 +25,6 @@ interface Confetti {
 }
 
 const PUZZLE_IMAGES = [
-  {
-    src: "/um-cafe-brand-board.jpg",
-    name: "Um Café",
-  },
   {
     src: "/brinda-logo-purple-illustrations.jpg",
     name: "BRINDA",
@@ -207,82 +204,83 @@ export default function PuzzleGame({ onClose }: { onClose: () => void }) {
         </div>
       )}
 
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-2 sm:p-4">
-        <Card className="relative w-full max-w-2xl bg-gradient-to-br from-white via-green-50/30 to-white p-3 sm:p-6 md:p-8 shadow-2xl border-2 border-primary/20 rounded-3xl">
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-2 md:p-4">
+        <Card className="relative w-full max-w-[95vw] md:max-w-5xl h-auto md:h-[500px] bg-white shadow-2xl border-2 border-primary/20 rounded-3xl flex flex-col md:flex-row overflow-hidden">
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-2 top-2 sm:right-4 sm:top-4 hover:bg-red-100 z-10 rounded-full"
+            className="absolute right-2 top-2 md:right-3 md:top-3 hover:bg-red-100 z-50 rounded-full"
             onClick={onClose}
           >
-            <X className="h-5 w-5 text-red-500" />
+            <X className="h-4 w-4 md:h-5 md:w-5 text-red-500" />
           </Button>
 
-          <div className="space-y-3 sm:space-y-4 md:space-y-6">
-            <div className="text-center pt-10 sm:pt-8 pb-2">
-              <div className="inline-block mb-3 sm:mb-4">
-                <div className="bg-primary/10 p-3 sm:p-4 rounded-2xl">
-                  <svg
-                    width="60"
-                    height="60"
-                    viewBox="0 0 100 100"
-                    className="sm:w-20 sm:h-20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="50" cy="50" r="45" fill="#059669" />
-                    <text x="50" y="70" fontSize="50" fill="white" fontWeight="bold" textAnchor="middle">
-                      C
-                    </text>
-                  </svg>
-                </div>
+          <div className="w-full md:w-[350px] flex flex-col justify-center items-center p-4 md:p-6 space-y-3 md:space-y-4 bg-white z-10">
+            <div className="text-center">
+              <div className="inline-block mb-2 md:mb-3">
+                <Image
+                  src="/cayumanque-full-logo.jpg"
+                  alt="Cayumanque Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain md:w-[120px] md:h-[120px]"
+                />
               </div>
-              <h3 className="font-black text-xl sm:text-2xl md:text-3xl text-primary mb-1">Agencia Cayumanque</h3>
-              <h2 className="font-black text-2xl sm:text-3xl md:text-4xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Arma el Puzzle
-              </h2>
-              <p className="mt-3 text-sm sm:text-base md:text-lg font-bold text-primary/80">{currentImage.name}</p>
+              <h3 className="font-black text-sm md:text-base text-primary mb-1">Agencia Cayumanque</h3>
+              <h2 className="font-black text-2xl md:text-3xl text-fuchsia-600 mb-1 md:mb-2">Arma el Puzzle</h2>
+              <p className="text-xs md:text-sm font-bold text-primary/80">{currentImage.name}</p>
             </div>
 
             {showCongrats && (
-              <div className="rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-secondary p-6 sm:p-8 text-center text-white shadow-2xl animate-bounce border-4 border-white">
-                <Trophy className="mx-auto h-12 w-12 sm:h-16 sm:w-16 mb-4 drop-shadow-lg" />
-                <p className="font-black text-2xl sm:text-3xl md:text-4xl mb-2">¡Felicitaciones!</p>
-                <p className="text-base sm:text-lg md:text-xl font-bold mb-4">Lo resolviste en {moves} movimientos</p>
-                <div className="pt-4 border-t border-white/30">
-                  <p className="text-sm sm:text-base font-semibold">Hecho por Agencia Cayumanque</p>
+              <div className="rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-secondary p-3 md:p-4 text-center text-white shadow-2xl animate-bounce border-4 border-white">
+                <Trophy className="mx-auto h-8 w-8 md:h-10 md:w-10 mb-2 drop-shadow-lg" />
+                <p className="font-black text-lg md:text-xl mb-1">¡Felicitaciones!</p>
+                <p className="text-xs md:text-sm font-bold mb-2">Lo resolviste en {moves} movimientos</p>
+                <div className="pt-2 border-t border-white/30">
+                  <p className="text-xs font-semibold">Hecho por Agencia Cayumanque</p>
                 </div>
               </div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center">
+            <div className="flex flex-col gap-2 w-full">
               <Button
                 onClick={initializePuzzle}
-                className="bg-primary hover:bg-primary/90 text-white font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-sm sm:text-base rounded-xl"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-xs md:text-sm rounded-xl py-2"
               >
-                <Shuffle className="mr-2 h-4 w-4" />
+                <Shuffle className="mr-2 h-3 w-3 md:h-4 md:w-4" />
                 Reiniciar
               </Button>
               <Button
                 onClick={changeImage}
-                className="bg-secondary hover:bg-secondary/90 text-white font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-sm sm:text-base rounded-xl"
+                className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-xs md:text-sm rounded-xl py-2"
               >
                 Cambiar Imagen
               </Button>
             </div>
 
             <div className="text-center">
-              <div className="inline-block bg-primary/10 px-6 py-3 rounded-full">
-                <span className="text-base sm:text-lg md:text-xl font-black text-primary">
+              <div className="inline-block bg-primary/10 px-3 md:px-4 py-1.5 md:py-2 rounded-full">
+                <span className="text-sm md:text-base font-black text-primary">
                   Movimientos: <span className="text-secondary">{moves}</span>
                 </span>
               </div>
             </div>
 
+            <div className="text-center bg-primary/5 py-1.5 md:py-2 px-2 md:px-3 rounded-xl">
+              <p className="text-xs text-primary font-bold">Arrastra las piezas para intercambiarlas</p>
+            </div>
+          </div>
+
+          <div className="flex-1 flex items-center justify-center p-4 md:p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
             <div
-              className="mx-auto grid gap-0.5 sm:gap-1 p-2 sm:p-3 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl"
+              className="grid bg-white/80 rounded-2xl shadow-2xl p-1.5 md:p-2"
               style={{
                 gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))`,
-                maxWidth: "min(90vw, 500px)",
+                width: "min(90vw, 350px)",
+                height: "min(90vw, 350px)",
+                maxWidth: "350px",
+                maxHeight: "350px",
+                gap: "1px",
               }}
             >
               {pieces.map((piece, index) => {
@@ -298,26 +296,24 @@ export default function PuzzleGame({ onClose }: { onClose: () => void }) {
                     onDragOver={handleDragOver}
                     onDrop={(e) => handleDrop(e, index)}
                     className={`
-                      aspect-square overflow-hidden rounded-lg border-3 transition-all shadow-md
+                      relative overflow-hidden rounded-lg border-2 transition-all duration-200
                       ${
                         draggedPiece === index
-                          ? "border-secondary ring-4 ring-secondary/50 scale-95 shadow-2xl"
-                          : "border-primary/30"
+                          ? "border-secondary ring-2 ring-secondary/50 scale-95 shadow-2xl z-10"
+                          : "border-primary/40"
                       }
-                      hover:border-primary hover:shadow-xl cursor-move hover:scale-[0.98] active:scale-95
+                      hover:border-primary hover:shadow-lg cursor-move hover:scale-[0.98] active:scale-95
+                      touch-none
                     `}
                     style={{
                       backgroundImage: `url(${currentImage.src})`,
                       backgroundSize: `${gridSize * 100}%`,
                       backgroundPosition: `${(col * 100) / (gridSize - 1)}% ${(row * 100) / (gridSize - 1)}%`,
+                      aspectRatio: "1",
                     }}
                   />
                 )
               })}
-            </div>
-
-            <div className="text-center bg-primary/5 py-3 px-4 rounded-xl">
-              <p className="text-xs sm:text-sm text-primary font-bold">Arrastra las piezas para intercambiarlas</p>
             </div>
           </div>
         </Card>

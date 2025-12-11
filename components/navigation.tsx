@@ -25,8 +25,8 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
             href="#hero"
             className="flex items-center gap-2 font-bold text-xl text-primary hover:text-secondary transition-colors"
           >
-            <div className="w-10 h-10 relative">
-              <Image src="/logo-cayumanque.png" alt="Cayumanque Logo" fill className="object-contain" priority />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 relative">
+              <Image src="/cayumanque-full-logo.jpg" alt="Cayumanque Logo" fill className="object-contain" priority />
             </div>
             <span className="hidden sm:inline">Cayumanque</span>
           </Link>

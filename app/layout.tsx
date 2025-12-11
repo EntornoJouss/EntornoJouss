@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased`} style={{ zoom: "0.9" }}>
         {children}
         <Analytics />
       </body>
