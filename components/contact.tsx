@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Puzzle } from "lucide-react"
 
-export default function Contact() {
+export default function Contact({ onOpenPuzzle }: { onOpenPuzzle?: () => void }) {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success">("idle")
 
   return (
@@ -86,6 +86,15 @@ export default function Contact() {
                 >
                   Enviar Email
                 </a>
+                {onOpenPuzzle && (
+                  <button
+                    onClick={onOpenPuzzle}
+                    className="w-full px-6 py-4 bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#FFE66D] text-white rounded-lg font-black hover:shadow-2xl transition-all transform hover:scale-105 active:scale-95 text-center text-sm sm:text-base flex items-center justify-center gap-2 animate-pulse hover:animate-none"
+                  >
+                    <Puzzle className="h-5 w-5" />
+                    ¡Juega con Nuestro Puzzle!
+                  </button>
+                )}
               </div>
             </div>
           </div>

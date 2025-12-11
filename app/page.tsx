@@ -22,7 +22,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <About />
-      <Contact />
+      <Contact onOpenPuzzle={() => setShowPuzzleGame(true)} />
       <Footer />
 
       {showQuoteModal && <QuoteModal onClose={() => setShowQuoteModal(false)} />}
