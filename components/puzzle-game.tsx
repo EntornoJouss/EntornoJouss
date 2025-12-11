@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { X, Shuffle, Trophy } from "lucide-react"
+import Image from "next/image"
 
 interface PuzzlePiece {
   id: number
@@ -52,6 +53,7 @@ export default function PuzzleGame({ onClose }: { onClose: () => void }) {
   const [moves, setMoves] = useState(0)
   const [currentImage, setCurrentImage] = useState(PUZZLE_IMAGES[0])
   const [confetti, setConfetti] = useState<Confetti[]>([])
+  const [showCongrats, setShowCongrats] = useState(false)
 
   useEffect(() => {
     initializePuzzle()
@@ -60,6 +62,11 @@ export default function PuzzleGame({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     if (isComplete && confetti.length === 0) {
       createConfetti()
+      setShowCongrats(true)
+      const timer = setTimeout(() => {
+        setShowCongrats(false)
+      }, 5000)
+      return () => clearTimeout(timer)
     }
   }, [isComplete])
 
@@ -129,6 +136,7 @@ export default function PuzzleGame({ onClose }: { onClose: () => void }) {
     setMoves(0)
     setDraggedPiece(null)
     setConfetti([])
+    setShowCongrats(false)
   }
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, index: number) => {
@@ -219,11 +227,21 @@ export default function PuzzleGame({ onClose }: { onClose: () => void }) {
               <p className="mt-2 text-sm sm:text-base md:text-lg font-bold text-pink-600">{currentImage.name}</p>
             </div>
 
-            {isComplete && (
+            {showCongrats && (
               <div className="rounded-xl bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 p-4 sm:p-6 text-center text-white shadow-lg animate-bounce">
+                <div className="mb-3 flex justify-center">
+                  <Image
+                    src="/logo-cayumanque.png"
+                    alt="Agencia Cayumanque"
+                    width={80}
+                    height={80}
+                    className="sm:w-24 sm:h-24"
+                  />
+                </div>
                 <Trophy className="mx-auto h-10 w-10 sm:h-12 sm:w-12 mb-2" />
                 <p className="font-black text-xl sm:text-2xl md:text-3xl">¡Felicitaciones!</p>
-                <p className="text-sm sm:text-base md:text-lg font-bold">Lo resolviste en {moves} movimientos</p>
+                <p className="text-sm sm:text-base md:text-lg font-bold mb-2">Lo resolviste en {moves} movimientos</p>
+                <p className="text-xs sm:text-sm font-semibold opacity-90">Creado por Agencia Cayumanque</p>
               </div>
             )}
 
