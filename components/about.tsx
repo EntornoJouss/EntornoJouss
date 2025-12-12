@@ -16,23 +16,14 @@ export default function About() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">Sobre Nosotros</h2>
             <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed text-justify">
               <p>
-                En Agencia Cayumanque somos un estudio de diseño y tecnología especializado en impulsar el crecimiento
-                de negocios y empresas a través de soluciones visuales modernas, funcionales y orientadas al
-                posicionamiento. Nuestra misión es ayudar a emprendedores y organizaciones de Ñuble y Chile a destacar
-                en un entorno competitivo, combinando diseño estratégico, comunicación clara y herramientas digitales
-                que fortalecen su presencia en todos sus canales.
+                Agencia Cayumanque nace como un grupo de profesionales que unen diseño, creatividad y herramientas
+                tecnológicas para acercar la digitalización a Ñuble, la zona y todo Chile. Trabajamos con dedicación y
+                pasión para crear páginas web simples, identidades visuales y piezas gráficas que ayuden a los negocios
+                a presentarse mejor, comunicar con claridad y ganar presencia en digital y en impresos.
               </p>
               <p>
-                Creemos en el diseño como un recurso empresarial clave: una marca bien construida comunica confianza,
-                orden, profesionalismo y visión. Por eso desarrollamos identidades visuales sólidas, sistemas gráficos
-                coherentes, estrategias de marketing efectivas y páginas web optimizadas para conectar con clientes
-                reales.
-              </p>
-              <p>
-                Nuestro equipo trabaja con enfoque consultivo, entendiendo la esencia de cada negocio para ofrecer
-                soluciones que generen valor, diferencien y aporten resultados concretos. Desde la creación de marcas
-                hasta la digitalización completa de tu empresa, estamos aquí para acompañarte en cada etapa y llevar tu
-                proyecto al siguiente nivel.
+                Nuestro objetivo es entregar soluciones prácticas y bien hechas, llevando el diseño a emprendedores y
+                empresas que buscan dar un paso adelante.
               </p>
             </div>
 

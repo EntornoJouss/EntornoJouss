@@ -1,48 +1,54 @@
 "use client"
 
-import { Palette, TrendingUp as Trending2, Megaphone, Briefcase, Globe } from "lucide-react"
+import { Globe, Palette, ImageIcon, FileText, Shirt, MapPin } from "lucide-react"
 
 export default function Services() {
   const services = [
     {
       id: 1,
-      title: "Diseño",
+      title: "Páginas Web Simples",
       description:
-        "Creamos identidades visuales únicas y sistemas gráficos que fortalecen la presencia de tu empresa. Desde logotipos, paletas cromáticas, tipografías, piezas corporativas y aplicaciones visuales, hasta la creación de universos gráficos completos, construimos una identidad coherente que te permita competir, diferenciarte y posicionarte con claridad en tu mercado.",
-      icon: Palette,
+        "Sitios fijos, claros y modernos para mostrar tu negocio de forma directa. Diseño limpio, estructura ordenada y todo listo para publicar.",
+      icon: Globe,
       color: "primary",
     },
     {
       id: 2,
-      title: "Marketing",
+      title: "Identidad Visual",
       description:
-        "Estrategias digitales que conectan tu marca con tu audiencia de forma efectiva. Desarrollamos planes de marketing que combinan contenido, diseño y comunicación estratégica para lograr alcance real. Optimizamos la presencia de tu marca en redes sociales, creamos campañas digitales alineadas a tus objetivos y generamos mensajes que impactan en el público correcto. Trabajamos con un enfoque orientado a resultados: aumentar visibilidad, generar interacción y fortalecer el posicionamiento digital de tu empresa.",
-      icon: Trending2,
+        "Diseño de logo, colores y lineamientos básicos para que tu marca se vea coherente en digital e impresos.",
+      icon: Palette,
       color: "secondary",
     },
     {
       id: 3,
-      title: "Publicidad",
+      title: "Diseño Gráfico Digital",
       description:
-        "Tu marca tiene un potencial enorme cuando sabe cómo mostrarse, crecer y expandir su alcance. La inversión en diseño publicitario te permite comunicar de forma clara, atractiva y profesional en todos tus canales. Creamos piezas gráficas para campañas, banners, contenido promocional, material para redes sociales, anuncios y comunicación comercial. Nuestro objetivo es potenciar tu presencia, ampliar tu audiencia y ayudar a que tu empresa destaque en un entorno competitivo, aumentando el reconocimiento y el valor percibido de tu marca.",
-      icon: Megaphone,
+        "Piezas visuales para redes sociales, banners y contenidos informativos. Diseños pensados para comunicar de forma clara.",
+      icon: ImageIcon,
       color: "accent",
     },
     {
       id: 4,
-      title: "Asesoría Digital / Empresarial",
-      description:
-        "Diseñamos y guiamos tu proyecto para que tengas soluciones digitales que ordenan, estructuran y profesionalizan tu empresa. Ofrecemos acompañamiento especializado para fortalecer tu marca desde adentro.",
-      icon: Briefcase,
+      title: "Impresión Gráfica",
+      description: "Diseños listos para imprimir: flyers, tarjetas, afiches, catálogos y material promocional.",
+      icon: FileText,
       color: "primary",
     },
     {
       id: 5,
-      title: "Página Web",
-      description:
-        "Sitios modernos, rápidos y funcionales para emprendedores, empresas y organizaciones. Creamos páginas web o software que se adaptan a tus necesidades, que pueden incluir: secciones básicas esenciales, botón de WhatsApp directo, formulario de contacto funcional, configuración para recibir cotizaciones directo a tu correo, integración de mapas, catálogo básico de productos o servicios, y software internos. Nos encargamos de todo por ti: diseño, redacción de textos, configuración, optimización y publicación. Te entregamos una página lista para usar desde el primer día.",
-      icon: Globe,
+      title: "Merch Textil",
+      description: "Diseños para estampado o bordado en poleras, hoodies, uniformes y merchandising.",
+      icon: Shirt,
       color: "secondary",
+    },
+    {
+      id: 6,
+      title: "Letreros y Señalética",
+      description:
+        "Diseños de letreros simples y señalética para espacios físicos, en archivos listos para producción.",
+      icon: MapPin,
+      color: "accent",
     },
   ]
 
@@ -55,12 +61,10 @@ export default function Services() {
             Nuestros Servicios
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
-            Integran diseño, estrategia y visión empresarial para impulsar la digitalización y el posicionamiento de
-            negocios y empresas desde la región de Ñuble al país. Desarrollamos páginas web efectivas, construimos
-            Identidad Visual Corporativa coherente y profesional, implementamos estrategias de Marketing que fortalecen
-            la presencia de tu marca y ofrecemos Consultoría como guía para el desarrollo de tu proyecto digital.
-            Nuestro enfoque se centra en crear soluciones que aumenten la visibilidad, mejoren la competitividad y
-            permitan que tu negocio destaque en un mercado cada vez más digital y exigente.
+            Ofrecemos soluciones de diseño claras y funcionales para dar presencia a tu negocio. Creamos páginas web
+            simples, identidad visual y piezas digitales, además de diseños para impresión, letreros y merch textil.
+            Nuestro enfoque es directo: entregar resultados prácticos y bien ejecutados para tus necesidades de
+            comunicación visual.
           </p>
         </div>
 
@@ -83,7 +87,7 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className={`fade-in fade-in-delay-${index === 0 ? "1" : index === 1 ? "2" : index === 2 ? "3" : index === 3 ? "4" : "5"} card-float w-full max-w-sm`}
+                className={`fade-in fade-in-delay-${index === 0 ? "1" : index === 1 ? "2" : index === 2 ? "3" : index === 3 ? "4" : index === 4 ? "5" : "6"} card-float w-full max-w-sm`}
               >
                 <div className="group relative bg-card rounded-2xl p-6 sm:p-8 border border-border hover:border-primary/50 transition-all duration-300 h-full overflow-hidden">
                   {/* Gradient background */}
