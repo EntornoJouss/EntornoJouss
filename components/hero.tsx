@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ArrowRight } from "lucide-react"
 import QuoteModal from "./quote-modal"
 import Image from "next/image"
 
@@ -88,7 +87,7 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 w-full flex flex-col justify-between min-h-[calc(100vh-4rem)]">
           <div className="flex flex-col items-start max-w-3xl">
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-1 sm:mb-2 leading-tight animate-title">
               Agencia
@@ -109,24 +108,6 @@ export default function Hero() {
                   {phrase}
                 </p>
               ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 fade-in-delay-2 w-full sm:w-auto">
-              <button
-                onClick={() => setShowQuoteModal(true)}
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-accent text-accent-foreground rounded-full font-bold hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto"
-                onMouseEnter={() => setHoveredButton(true)}
-                onMouseLeave={() => setHoveredButton(false)}
-              >
-                Cotizar
-                <ArrowRight className={`ml-2 transition-transform ${hoveredButton ? "translate-x-1" : ""}`} size={20} />
-              </button>
-              <a
-                href="#portafolio"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/10 text-white rounded-full font-bold border-2 border-white/30 hover:bg-white/20 transition-all backdrop-blur-sm text-base sm:text-lg w-full sm:w-auto"
-              >
-                Ver Portafolio
-              </a>
             </div>
           </div>
         </div>
