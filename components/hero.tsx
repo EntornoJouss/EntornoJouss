@@ -20,7 +20,17 @@ const SLIDES = [
   },
 ]
 
-const ROTATING_PHRASES = ["Creatividad sin Límites", "Branding profesional", "Diseño", "Te asesoramos en tu proyecto"]
+const ROTATING_PHRASES = [
+  "Páginas web simples",
+  "Identidad visual",
+  "Contenido digital",
+  "Impresión gráfica",
+  "Merch textil",
+  "Letreros y señalética",
+  "Fichas y catálogos",
+  "Elementos promocionales",
+  "Presentaciones y piezas visuales",
+]
 
 export default function Hero() {
   const [hoveredButton, setHoveredButton] = useState(false)
@@ -100,10 +110,6 @@ export default function Hero() {
                 </p>
               ))}
             </div>
-
-            <p className="text-base sm:text-lg lg:text-xl text-gray-800 mb-6 sm:mb-10 fade-in-delay-1 leading-relaxed font-semibold drop-shadow-md">
-              Diseño • Marketing • Branding • Productos Corporativos
-            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 fade-in-delay-2 w-full sm:w-auto">
               <button
