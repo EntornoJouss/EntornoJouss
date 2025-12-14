@@ -87,27 +87,29 @@ export default function Hero() {
                 src={slide.image || "/placeholder.svg"}
                 alt={slide.title}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority={index === 0}
+                sizes="100vw"
+                quality={100}
               />
             </div>
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 w-full flex flex-col justify-between min-h-[calc(100vh-4rem)]">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20 w-full flex flex-col justify-between min-h-[calc(100vh-4rem)]">
           <div className="flex flex-col items-start max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-2 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-1 sm:mb-2 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Agencia
             </h1>
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-black text-white mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(0,0,0,0.9)]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(0,0,0,0.9)]">
               Cayumanque
             </h1>
 
-            <div className="mb-4 sm:mb-8 fade-in-delay-1 h-[80px] sm:h-[100px] lg:h-[120px] flex items-start relative w-full">
+            <div className="mb-6 sm:mb-8 fade-in-delay-1 h-[60px] sm:h-[80px] md:h-[100px] lg:h-[120px] flex items-start relative w-full">
               {ROTATING_PHRASES.map((phrase, index) => (
                 <p
                   key={index}
-                  className="absolute top-0 left-0 text-xl sm:text-2xl lg:text-4xl text-white font-bold leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] transition-opacity duration-500"
+                  className="absolute top-0 left-0 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] transition-opacity duration-500"
                   style={{
                     opacity: currentPhrase === index ? 1 : 0,
                   }}
@@ -119,7 +121,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
+        <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-1.5 sm:gap-2 md:gap-3">
           {SLIDES.map((_, index) => (
             <button
               key={index}
@@ -128,7 +130,7 @@ export default function Hero() {
               aria-label={`Go to slide ${index + 1}`}
             >
               <div
-                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   currentSlide === index ? "bg-accent scale-125" : "bg-white/40 hover:bg-white/60"
                 }`}
               />
