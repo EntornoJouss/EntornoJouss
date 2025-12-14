@@ -27,7 +27,7 @@ export default function Home() {
       <Contact onOpenPuzzle={() => setShowPuzzleGame(true)} />
       <Footer />
 
-      {showQuoteModal && <QuoteModal onClose={() => setShowQuoteModal(false)} />}
+      <QuoteModal isOpen={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
       {showPuzzleGame && <PuzzleGame onClose={() => setShowPuzzleGame(false)} />}
     </main>
   )
