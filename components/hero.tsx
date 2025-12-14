@@ -6,16 +6,24 @@ import Image from "next/image"
 
 const SLIDES = [
   {
-    image: "/hero-branding-logos.png",
-    title: "Branding Profesional",
+    image: "/hero-brinda-wine.png",
+    title: "BRINDA - Expo Vinos Chillán",
   },
   {
-    image: "/hero-forest-nature.png",
-    title: "Creatividad sin Límites",
+    image: "/hero-um-cafe.png",
+    title: "UM Café - Branding",
   },
   {
-    image: "/hero-portfolio-grid.png",
-    title: "Diseño",
+    image: "/hero-forest-banner.png",
+    title: "Diseño Natural",
+  },
+  {
+    image: "/hero-fdll-festival.png",
+    title: "Fiesta de la Longaniza",
+  },
+  {
+    image: "/hero-marcas-logos.png",
+    title: "Portfolio de Marcas",
   },
 ]
 
@@ -82,17 +90,16 @@ export default function Hero() {
                 className="object-cover"
                 priority={index === 0}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50" />
             </div>
           ))}
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 w-full flex flex-col justify-between min-h-[calc(100vh-4rem)]">
           <div className="flex flex-col items-start max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-1 sm:mb-2 leading-tight animate-title">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-2 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Agencia
             </h1>
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-black text-primary mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(45,80,22,0.8)]">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-black text-white mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(0,0,0,0.9)]">
               Cayumanque
             </h1>
 
@@ -100,7 +107,7 @@ export default function Hero() {
               {ROTATING_PHRASES.map((phrase, index) => (
                 <p
                   key={index}
-                  className="absolute top-0 left-0 text-xl sm:text-2xl lg:text-4xl text-gray-900 font-bold leading-tight drop-shadow-md transition-opacity duration-500"
+                  className="absolute top-0 left-0 text-xl sm:text-2xl lg:text-4xl text-white font-bold leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] transition-opacity duration-500"
                   style={{
                     opacity: currentPhrase === index ? 1 : 0,
                   }}
