@@ -64,7 +64,7 @@ export default function Portfolio() {
     <section id="portafolio" className="w-full py-16 sm:py-24 bg-muted/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 mb-10 sm:mb-16 fade-in text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">Portafolio</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-popover-foreground font-medium">Portafolio</h2>
           <p className="text-lg sm:text-xl text-muted-foreground px-2">
             Proyectos que hemos desarrollado con pasión y creatividad
           </p>

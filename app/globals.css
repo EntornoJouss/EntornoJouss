@@ -4,38 +4,38 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fafaf8;
-  --foreground: #1a1a18;
-  --card: #ffffff;
-  --card-foreground: #1a1a18;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a18;
+  --background: rgb(238, 238, 238);
+  --foreground: rgb(100, 100, 100);
+  --card: rgb(250, 250, 250);
+  --card-foreground: rgb(192, 192, 192);
+  --popover: rgb(255, 255, 255);
+  --popover-foreground: rgb(51, 51, 51);
   --primary: #2d5016;
   --primary-foreground: #fafaf8;
-  --secondary: #4a7c2c;
+  --secondary: rgb(114, 172, 80);
   --secondary-foreground: #fafaf8;
-  --muted: #e8e6e0;
-  --muted-foreground: #6b6b66;
-  --accent: #d4a574;
+  --muted: rgb(238, 238, 238);
+  --muted-foreground: rgb(53, 53, 49);
+  --accent: rgb(170, 170, 170);
   --accent-foreground: #1a1a18;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: #e0ddd6;
   --input: #fafaf8;
-  --ring: #2d5016;
-  --chart-1: #2d5016;
+  --ring: rgb(171, 199, 95);
+  --chart-1: rgb(76, 133, 38);
   --chart-2: #4a7c2c;
-  --chart-3: #d4a574;
+  --chart-3: rgb(116, 116, 116);
   --chart-4: #e8e6e0;
-  --chart-5: #6b6b66;
+  --chart-5: rgb(63, 63, 63);
   --radius: 0.625rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1a18;
-  --sidebar-primary: #2d5016;
+  --sidebar-primary: rgb(65, 64, 64);
   --sidebar-primary-foreground: #fafaf8;
-  --sidebar-accent: #d4a574;
+  --sidebar-accent: rgb(39, 39, 39);
   --sidebar-accent-foreground: #1a1a18;
-  --sidebar-border: #e0ddd6;
+  --sidebar-border: rgb(63, 61, 61);
   --sidebar-ring: #2d5016;
 }
 
@@ -75,8 +75,8 @@
 }
 
 @theme inline {
-  --font-sans: "Verdana", "Geneva", sans-serif;
-  --font-mono: "Verdana", "Geneva", monospace;
+  --font-sans: 'Heebo', 'Heebo Fallback';
+  --font-mono: 'Dancing Script', 'Dancing Script Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -113,7 +113,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-}
+  --font-serif: 'Lora', 'Lora Fallback';}
 
 @layer base {
   * {

@@ -13,7 +13,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Content */}
           <div className="fade-in order-2 md:order-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">Sobre Nosotros</h2>
+            <h2 className="text-3xl text-foreground mb-4 sm:mb-6 sm:text-4xl font-semibold">Sobre Nosotros</h2>
             <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed text-justify">
               <p>
                 Agencia Cayumanque nace como un grupo de profesionales que unen diseño, creatividad y herramientas

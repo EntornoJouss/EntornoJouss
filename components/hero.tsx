@@ -6,24 +6,36 @@ import Image from "next/image"
 
 const SLIDES = [
   {
-    image: "/hero-brinda-wine.png",
-    title: "BRINDA - Expo Vinos Chillán",
+    image: "/hero-vintage-60s-new-1.jpg",
+    title: "Estudio Creativo",
   },
   {
-    image: "/hero-um-cafe.png",
-    title: "UM Café - Branding",
+    image: "/hero-vintage-60s-2.jpg",
+    title: "Pop Art Desgastado",
   },
   {
-    image: "/hero-forest-banner.png",
-    title: "Diseño Natural",
+    image: "/hero-vintage-60s-3.jpg",
+    title: "Op Art Retro",
   },
   {
-    image: "/hero-fdll-festival.png",
-    title: "Fiesta de la Longaniza",
+    image: "/hero-vintage-60s-4.jpg",
+    title: "Flower Power Vintage",
   },
   {
-    image: "/hero-marcas-logos.png",
-    title: "Portfolio de Marcas",
+    image: "/hero-vintage-60s-5.jpg",
+    title: "Era Espacial Retro",
+  },
+  {
+    image: "/hero-vintage-60s-6.jpg",
+    title: "Expresionismo Abstracto",
+  },
+  {
+    image: "/hero-vintage-60s-new-7.jpg",
+    title: "Diseno Modernista",
+  },
+  {
+    image: "/hero-vintage-60s-8.jpg",
+    title: "Viaje Retro",
   },
 ]
 
@@ -71,7 +83,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="hero" className="relative w-full min-h-screen flex items-center pt-16 overflow-hidden">
+      <section id="hero" className="relative w-full h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           {SLIDES.map((slide, index) => (
             <div
@@ -94,16 +106,16 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 w-full flex flex-col justify-between min-h-[calc(100vh-4rem)]">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-24 pb-20 w-full flex flex-col justify-center h-full">
           <div className="flex flex-col items-start max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-2 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              Agencia
+            <h1 className="text-3xl lg:text-6xl mb-1 sm:mb-2 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-normal leading-7 tracking-normal sm:text-3xl text-left text-[rgba(255,255,255,1)]">
+              Somos Agencia  
             </h1>
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-black text-white mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(0,0,0,0.9)]">
+            <h1 className="text-5xl lg:text-8xl xl:text-9xl text-white mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] font-semibold sm:text-5xl">
               Cayumanque
             </h1>
 
-            <div className="mb-4 sm:mb-8 fade-in-delay-1 h-[80px] sm:h-[100px] lg:h-[120px] flex items-start relative w-full">
+            <div className="mb-4 sm:mb-8 fade-in-delay-1 h-[80px] sm:h-[100px] lg:h-[120px] flex items-start relative font-sans font-normal tracking-normal leading-7 w-[104%] border-0">
               {ROTATING_PHRASES.map((phrase, index) => (
                 <p
                   key={index}

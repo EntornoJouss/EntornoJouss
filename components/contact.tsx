@@ -37,7 +37,7 @@ export default function Contact({ onOpenPuzzle }: { onOpenPuzzle?: () => void })
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           {/* Info */}
           <div className="fade-in">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#222222]">Contáctanos</h2>
+            <h2 className="text-3xl sm:text-4xl mb-4 sm:mb-6 text-[#222222] font-semibold md:text-4xl">Contáctanos</h2>
             <p className="text-base sm:text-lg text-[#222222]/80 mb-6 sm:mb-8">
               ¿Tienes un proyecto en mente? Nos encantaría escuchar tus ideas. Contáctanos hoy.
             </p>

@@ -64,7 +64,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-16 fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-popover-foreground font-normal md:text-4xl">
             Nuestros Servicios
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
