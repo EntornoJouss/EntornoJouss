@@ -16,7 +16,7 @@ export default function CTAButtons({ onOpenQuote }: CTAButtonsProps) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={onOpenQuote}
-            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-[#5622E8] text-white rounded-full font-bold hover:bg-[#4519C0] hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto"
+            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 bg-[#5622E8] text-white rounded-full font-bold hover:bg-[#4519C0] hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base w-full sm:w-auto font-sans sm:text-2xl sm:py-1"
             onMouseEnter={() => setHoveredButton(true)}
             onMouseLeave={() => setHoveredButton(false)}
           >
@@ -25,7 +25,7 @@ export default function CTAButtons({ onOpenQuote }: CTAButtonsProps) {
           </button>
           <a
             href="#portafolio"
-            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-primary/90 text-white rounded-full font-bold border-2 border-primary hover:bg-primary transition-all text-base sm:text-lg w-full sm:w-auto"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold hover:bg-primary transition-all w-full sm:w-auto text-2xl sm:py-1 sm:px-4 bg-background border-4 text-chart-3 border-chart-3"
           >
             Ver Portafolio
           </a>
