@@ -18,20 +18,20 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-white/10 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-white/20 transition-all duration-300">
+      <div className="w-full px-2 sm:px-4 lg:px-6">
+        <div className="flex justify-between items-center h-20">
           <Link
             href="/"
-            className="flex items-center font-bold text-xl text-white hover:opacity-80 transition-opacity"
+            className="flex items-center font-bold text-xl text-white hover:opacity-90 transition-opacity -ml-2"
           >
-            <div className="w-32 h-14 sm:w-40 sm:h-16 relative">
-              <Image src="/logo-blanco.svg" alt="Cayumanque Logo" fill className="object-contain" priority />
+            <div className="w-36 h-16 sm:w-44 sm:h-20 relative">
+              <Image src="/logo-blanco.svg" alt="Cayumanque Logo" fill className="object-contain object-left" priority />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navItems.map((item) =>
               item.external ? (
                 <a
@@ -39,7 +39,7 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-accent transition-colors text-sm font-medium drop-shadow-sm"
+                  className="text-white font-bold text-sm uppercase tracking-wide hover:text-accent transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 >
                   {item.label}
                 </a>
@@ -47,7 +47,7 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-white hover:text-accent transition-colors text-sm font-medium drop-shadow-sm"
+                  className="text-white font-bold text-sm uppercase tracking-wide hover:text-accent transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 >
                   {item.label}
                 </Link>
@@ -57,7 +57,7 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
               onClick={onOpenPuzzle}
               size="sm"
               variant="outline"
-              className="border-white/60 text-white hover:bg-white/20 hover:text-white bg-transparent backdrop-blur-sm"
+              className="border-white text-white font-bold hover:bg-white hover:text-black bg-transparent uppercase tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
             >
               <Puzzle className="h-4 w-4 mr-2" />
               Jugar
@@ -65,14 +65,14 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          <button className="md:hidden text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 bg-black/80 backdrop-blur-lg rounded-b-xl -mx-4 px-4">
+          <div className="md:hidden pb-4 space-y-1 bg-black/90 backdrop-blur-lg rounded-b-xl -mx-2 px-2">
             {navItems.map((item) =>
               item.external ? (
                 <a
@@ -80,7 +80,7 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 text-white hover:text-accent transition-colors"
+                  className="block px-4 py-3 text-white font-bold uppercase tracking-wide hover:text-accent hover:bg-white/10 transition-colors rounded-lg"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -89,7 +89,7 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-2 text-white hover:text-accent transition-colors"
+                  className="block px-4 py-3 text-white font-bold uppercase tracking-wide hover:text-accent hover:bg-white/10 transition-colors rounded-lg"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -101,7 +101,7 @@ export default function Navigation({ onOpenQuote, onOpenPuzzle }) {
                 onOpenPuzzle()
                 setIsOpen(false)
               }}
-              className="w-full text-left px-4 py-2 text-white hover:bg-white/10 transition-colors flex items-center gap-2"
+              className="w-full text-left px-4 py-3 text-white font-bold uppercase tracking-wide hover:bg-white/10 transition-colors flex items-center gap-2 rounded-lg"
             >
               <Puzzle className="h-4 w-4" />
               Jugar Puzzle
