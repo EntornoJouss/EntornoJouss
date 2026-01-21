@@ -11,12 +11,12 @@ export default function CTAButtons({ onOpenQuote }: CTAButtonsProps) {
   const [hoveredButton, setHoveredButton] = useState(false)
 
   return (
-    <section className="w-full py-8 sm:py-12 bg-gradient-to-b from-white/50 to-transparent">
+    <section className="w-full py-8 sm:py-12 bg-gradient-to-b from-white/50 to-transparent tracking-normal leading-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={onOpenQuote}
-            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 bg-[#5622E8] text-white rounded-full font-bold hover:bg-[#4519C0] hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base w-full sm:w-auto font-sans sm:text-2xl sm:py-1"
+            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 bg-[#5622E8] text-white rounded-full font-bold hover:bg-[#4519C0] hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 w-full sm:w-auto font-sans sm:py-1 text-3xl"
             onMouseEnter={() => setHoveredButton(true)}
             onMouseLeave={() => setHoveredButton(false)}
           >
