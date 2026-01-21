@@ -25,14 +25,14 @@
   --ring: rgb(171, 199, 95);
   --chart-1: rgb(76, 133, 38);
   --chart-2: #4a7c2c;
-  --chart-3: rgb(116, 116, 116);
-  --chart-4: #e8e6e0;
-  --chart-5: rgb(63, 63, 63);
+  --chart-3: rgb(50, 50, 50);
+  --chart-4: rgb(182, 182, 182);
+  --chart-5: rgb(234, 228, 228);
   --radius: 0.625rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a1a18;
+  --sidebar-foreground: rgb(86, 86, 86);
   --sidebar-primary: rgb(65, 64, 64);
-  --sidebar-primary-foreground: #fafaf8;
+  --sidebar-primary-foreground: rgb(27, 27, 27);
   --sidebar-accent: rgb(39, 39, 39);
   --sidebar-accent-foreground: #1a1a18;
   --sidebar-border: rgb(63, 61, 61);
@@ -75,8 +75,9 @@
 }
 
 @theme inline {
-  --font-sans: 'Heebo', 'Heebo Fallback';
-  --font-mono: 'Dancing Script', 'Dancing Script Fallback';
+  --font-sans: 'Assistant', 'Assistant Fallback';
+  --font-mono: 'Courier New', monospace;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

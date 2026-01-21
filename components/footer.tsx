@@ -15,8 +15,8 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 font-sans font-semibold">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
-          <div className="fade-in">
-            <h3 className="text-2xl font-bold mb-4">Cayumanque</h3>
+          <div className="fade-in font-normal leading-7">
+            <h3 className="mb-4 font-black text-3xl">Cayumanque</h3>
             <p className="text-white/70 mb-6">
               Impulsando la región con diseño y tecnología
             </p>

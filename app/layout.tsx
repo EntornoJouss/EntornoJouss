@@ -3,12 +3,23 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-import { Heebo as V0_Font_Heebo, Dancing_Script as V0_Font_Dancing_Script, Lora as V0_Font_Lora } from 'next/font/google'
+import { Inter, Playfair_Display, Assistant as V0_Font_Assistant, Lora as V0_Font_Lora } from 'next/font/google'
 
 // Initialize fonts
-const _heebo = V0_Font_Heebo({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _dancingScript = V0_Font_Dancing_Script({ subsets: ['latin'], weight: ["400","500","600","700"] })
+const _assistant = V0_Font_Assistant({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800"] })
 const _lora = V0_Font_Lora({ subsets: ['latin'], weight: ["400","500","600","700"] })
+
+// Initialize fonts with latin-ext for ñ support
+const inter = Inter({ 
+  subsets: ['latin', 'latin-ext'], 
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: '--font-inter'
+})
+const playfair = Playfair_Display({ 
+  subsets: ['latin', 'latin-ext'], 
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: '--font-playfair'
+})
 
 export const metadata: Metadata = {
   title: "Cayumanque - Agencia Digital de Diseño",
@@ -32,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`font-sans antialiased`} style={{ zoom: "0.9" }}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`} style={{ zoom: "0.9" }}>
         {children}
         <Analytics />
       </body>

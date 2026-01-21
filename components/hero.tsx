@@ -108,14 +108,14 @@ export default function Hero() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-24 pb-20 w-full flex flex-col justify-center h-full">
           <div className="flex flex-col items-start max-w-3xl">
-            <h1 className="text-3xl lg:text-6xl mb-1 sm:mb-2 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-7 tracking-normal text-left text-[rgba(255,255,255,1)] sm:text-2xl font-light">
+            <h1 className="text-3xl lg:text-6xl mb-1 leading-tight animate-title drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-7 tracking-normal text-left text-[rgba(255,255,255,1)] sm:text-2xl font-light sm:mb-1">
               Somos Agencia  
             </h1>
             <h1 className="text-5xl lg:text-8xl xl:text-9xl text-white mb-4 sm:mb-8 leading-none animate-glow drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] font-semibold sm:text-4xl">
               Cayumanque
             </h1>
 
-            <div className="mb-4 sm:mb-8 fade-in-delay-1 h-[80px] sm:h-[100px] lg:h-[120px] flex items-start relative font-sans leading-7 w-[104%] border-0 tracking-widest font-light">
+            <div className="mb-4 sm:mb-8 fade-in-delay-1 h-[80px] sm:h-[100px] lg:h-[120px] flex items-start relative w-[104%] border-0 tracking-widest leading-10 py-1 mt-[-16px] font-mono text-xs font-thin">
               {ROTATING_PHRASES.map((phrase, index) => (
                 <p
                   key={index}
