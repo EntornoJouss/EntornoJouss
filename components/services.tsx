@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Globe, Palette, ImageIcon, FileText, Shirt, MapPin } from "lucide-react"
 
 export default function Services() {
@@ -11,6 +12,7 @@ export default function Services() {
         "Sitios fijos, claros y modernos para mostrar tu negocio de forma directa. Diseño limpio, estructura ordenada y todo listo para publicar.",
       icon: Globe,
       color: "primary",
+      image: "/services/web-simple.jpg",
     },
     {
       id: 2,
@@ -19,6 +21,7 @@ export default function Services() {
         "Diseño de logo, colores y lineamientos básicos para que tu marca se vea coherente en digital e impresos.",
       icon: Palette,
       color: "secondary",
+      image: "/services/identidad-visual.jpg",
     },
     {
       id: 3,
@@ -27,6 +30,7 @@ export default function Services() {
         "Piezas visuales para redes sociales, banners y contenidos informativos. Diseños pensados para comunicar de forma clara.",
       icon: ImageIcon,
       color: "accent",
+      image: "/services/diseno-digital.jpg",
     },
     {
       id: 4,
@@ -34,6 +38,7 @@ export default function Services() {
       description: "Diseños listos para imprimir: flyers, tarjetas, afiches, catálogos y material promocional.",
       icon: FileText,
       color: "primary",
+      image: "/services/impresion-grafica.jpg",
     },
     {
       id: 5,
@@ -41,6 +46,7 @@ export default function Services() {
       description: "Diseños para estampado o bordado en poleras, hoodies, uniformes y merchandising.",
       icon: Shirt,
       color: "secondary",
+      image: "/services/merch-textil.jpg",
     },
     {
       id: 6,
@@ -49,6 +55,7 @@ export default function Services() {
         "Diseños de letreros simples y señalética para espacios físicos, en archivos listos para producción.",
       icon: MapPin,
       color: "accent",
+      image: "/services/senaletica.jpg",
     },
   ]
 
@@ -89,20 +96,26 @@ export default function Services() {
                 key={service.id}
                 className={`fade-in fade-in-delay-${index === 0 ? "1" : index === 1 ? "2" : index === 2 ? "3" : index === 3 ? "4" : index === 4 ? "5" : "6"} card-float w-full max-w-sm`}
               >
-                <div className="group relative bg-card rounded-2xl p-6 sm:p-8 border border-border hover:border-primary/50 transition-all duration-300 h-full overflow-hidden">
-                  {/* Gradient background */}
-                  <div
-                    className={`absolute inset-0 ${bgColor} opacity-0 group-hover:opacity-100 transition-all duration-300`}
-                  />
+                <div className="group relative bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 h-full overflow-hidden">
+                  {/* Image */}
+                  <div className="relative w-full h-40 overflow-hidden">
+                    <Image
+                      src={service.image || "/placeholder.svg"}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                    <div
+                      className={`absolute top-3 left-3 ${bgColor} inline-flex p-2 rounded-lg group-hover:scale-110 transition-transform`}
+                    >
+                      <Icon className={`${colorClass} w-5 h-5`} />
+                    </div>
+                  </div>
 
                   {/* Content */}
-                  <div className="relative z-10">
-                    <div
-                      className={`${bgColor} inline-flex p-3 sm:p-4 rounded-xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform`}
-                    >
-                      <Icon className={`${colorClass} w-5 h-5 sm:w-6 sm:h-6`} />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors">
+                  <div className="relative z-10 p-5">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors text-justify">

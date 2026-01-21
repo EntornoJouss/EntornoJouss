@@ -4,30 +4,34 @@ import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
+// Portafolio organizado por proyecto y coherencia cromatica
 const portfolioSlides = [
+  // Slide 1: BRINDA - Expo Vinos (Gama purpura/violeta)
   [
-    { id: 1, title: "Um Café - Brand Board Completo", image: "/um-cafe-brand-board.jpg" },
-    { id: 2, title: "BRINDA - Banner Publicitario Exterior", image: "/brinda-outdoor-banner.jpg" },
-    { id: 3, title: "BRINDA - Copas de Vino Personalizadas", image: "/brinda-wine-glasses.jpg" },
-    { id: 4, title: "Diseños 100% Personalizados", image: "/custom-designs-services.jpg" },
-    { id: 5, title: "BRINDA - Ilustración Viñedo Itata", image: "/brinda-vineyard-illustration.jpg" },
-    { id: 6, title: "BRINDA - Identidad Visual con Ilustraciones", image: "/brinda-logo-purple-illustrations.jpg" },
+    { id: 1, title: "BRINDA - Identidad Visual", image: "/brinda-logo-purple-illustrations.jpg", category: "BRINDA" },
+    { id: 2, title: "BRINDA - Brand Board Completo", image: "/brinda-brand-board-complete.jpg", category: "BRINDA" },
+    { id: 3, title: "BRINDA - Variantes de Logo", image: "/brinda-logo-color-variations.jpg", category: "BRINDA" },
+    { id: 4, title: "BRINDA - Fotografía de Producto", image: "/brinda-wine-pour-purple.jpg", category: "BRINDA" },
+    { id: 5, title: "BRINDA - Copas Personalizadas", image: "/brinda-wine-glasses.jpg", category: "BRINDA" },
+    { id: 6, title: "BRINDA - Ilustración Viñedo", image: "/brinda-vineyard-illustration.jpg", category: "BRINDA" },
   ],
+  // Slide 2: Fiesta de la Longaniza (Gama naranja/rojo)
   [
-    { id: 7, title: "BRINDA - Brand Board Completo", image: "/brinda-brand-board-complete.jpg" },
-    { id: 8, title: "BRINDA - Variantes de Logo en Colores", image: "/brinda-logo-color-variations.jpg" },
-    { id: 9, title: "BRINDA - Fotografía de Producto con Vino", image: "/brinda-wine-pour-purple.jpg" },
-    { id: 10, title: "Quinchamalí - Patrón de Ilustraciones", image: "/quinchamali-pattern-black.jpg" },
-    { id: 11, title: "Quinchamalí - Artesanía en Proceso", image: "/quinchamali-artisan-hands.jpg" },
-    { id: 12, title: "Quinchamalí - Logo con Marco Decorativo", image: "/quinchamali-logo-framed.jpg" },
+    { id: 7, title: "Longaniza - Logo Principal", image: "/longaniza-logo-principal.jpg", category: "LONGANIZA" },
+    { id: 8, title: "Longaniza - Paleta de Colores", image: "/longaniza-paleta-colores.jpg", category: "LONGANIZA" },
+    { id: 9, title: "Longaniza - Layout General", image: "/longaniza-layout-general.jpg", category: "LONGANIZA" },
+    { id: 10, title: "Longaniza - Layout del Mapa", image: "/longaniza-layout-map.jpg", category: "LONGANIZA" },
+    { id: 11, title: "Longaniza - Vasos Corporativos", image: "/longaniza-cups-collection.jpg", category: "LONGANIZA" },
+    { id: 12, title: "Longaniza - Evento Masivo", image: "/longaniza-crowd-night.jpg", category: "LONGANIZA" },
   ],
+  // Slide 3: Quinchamali y Um Cafe (Gama tierra/negro/verde)
   [
-    { id: 13, title: "Quinchamalí - Ilustración Chancho Decorado", image: "/quinchamali-pig-illustration.jpg" },
-    { id: 14, title: "Fiesta de la Longaniza - Layout del Evento", image: "/longaniza-layout-map.jpg" },
-    { id: 15, title: "Fiesta de la Longaniza - Variantes Logo", image: "/longaniza-logo-variations.jpg" },
-    { id: 16, title: "Fiesta de la Longaniza - Evento Masivo", image: "/longaniza-crowd-night.jpg" },
-    { id: 17, title: "Fiesta de la Longaniza - Vasos Corporativos", image: "/longaniza-cups-collection.jpg" },
-    { id: 18, title: "BRINDA - Ilustración Viñedo Itata", image: "/brinda-vineyard-illustration.jpg" },
+    { id: 13, title: "Quinchamalí - Patrón Ilustraciones", image: "/quinchamali-pattern-black.jpg", category: "QUINCHAMALI" },
+    { id: 14, title: "Quinchamalí - Logo Decorativo", image: "/quinchamali-logo-framed.jpg", category: "QUINCHAMALI" },
+    { id: 15, title: "Quinchamalí - Ilustración Chancho", image: "/quinchamali-pig-illustration.jpg", category: "QUINCHAMALI" },
+    { id: 16, title: "Um Café - Brand Board", image: "/um-cafe-brand-board.jpg", category: "UM CAFE" },
+    { id: 17, title: "Diseños Personalizados", image: "/custom-designs-services.jpg", category: "SERVICIOS" },
+    { id: 18, title: "BRINDA - Banner Exterior", image: "/brinda-outdoor-banner.jpg", category: "BRINDA" },
   ],
 ]
 

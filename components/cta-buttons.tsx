@@ -16,7 +16,7 @@ export default function CTAButtons({ onOpenQuote }: CTAButtonsProps) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={onOpenQuote}
-            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-accent text-accent-foreground rounded-full font-bold hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto"
+            className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-[#5622E8] text-white rounded-full font-bold hover:bg-[#4519C0] hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base sm:text-lg w-full sm:w-auto"
             onMouseEnter={() => setHoveredButton(true)}
             onMouseLeave={() => setHoveredButton(false)}
           >
