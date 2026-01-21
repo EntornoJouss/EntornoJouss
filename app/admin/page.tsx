@@ -2,26 +2,16 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import ImageIcon from "lucide-react"
-import {
-  LayoutDashboard,
-  Settings,
-  LogOut,
-  Eye,
-  Edit,
-  Trash2,
-  Plus,
-  ExternalLink,
-  Users,
-  Mail,
-  Globe,
-} from "lucide-react"
+import Image from "next/image"
+import { LayoutDashboard, Settings, LogOut, Eye, Edit, Trash2, Plus, ExternalLink, Users, Mail, Globe, Layers, ImagePlusIcon as ImageLucide } from "lucide-react"
 
 interface Stats {
   totalProjects: number
   totalServices: number
   heroSlides: number
 }
+
+const ImageIcon = ImageLucide; // Declare ImageIcon variable before using it
 
 export default function AdminDashboard() {
   const [loading, setLoading] = useState(true)
@@ -67,7 +57,7 @@ export default function AdminDashboard() {
   const menuItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "portfolio", label: "Portafolio", icon: ImageIcon },
-    { id: "hero", label: "Hero Slides", icon: Globe },
+    { id: "hero", label: "Hero Slides", icon: ImageIcon },
     { id: "settings", label: "Configuración", icon: Settings },
   ]
 
@@ -93,7 +83,7 @@ export default function AdminDashboard() {
         <div className="p-6 border-b border-border">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 relative">
-              <ImageIcon src="/logo-cayumanque.png" alt="Logo" className="object-contain" />
+              <Image src="/logo-cayumanque.png" alt="Logo" fill className="object-contain" />
             </div>
             <div>
               <h2 className="font-bold text-foreground">Cayumanque</h2>
@@ -174,7 +164,7 @@ export default function AdminDashboard() {
               <div className="bg-card border border-border rounded-xl p-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/10 p-3 rounded-lg">
-                    <Globe className="w-6 h-6 text-accent" />
+                    <ImageIcon className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-foreground">{stats.heroSlides}</p>
@@ -308,7 +298,7 @@ export default function AdminDashboard() {
               {heroSlides.map((slide) => (
                 <div key={slide.id} className="bg-card border border-border rounded-xl overflow-hidden">
                   <div className="aspect-video relative">
-                    <ImageIcon src={slide.image || "/placeholder.svg"} alt={slide.name} className="object-cover" />
+                    <Image src={slide.image || "/placeholder.svg"} alt={slide.name} fill className="object-cover" />
                   </div>
                   <div className="p-4">
                     <div className="flex items-center justify-between mb-2">
