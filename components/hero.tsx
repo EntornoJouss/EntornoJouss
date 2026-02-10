@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
-import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 import QuoteModal from "./quote-modal"
 import Image from "next/image"
 
@@ -41,27 +40,6 @@ const SLIDES = [
   },
 ]
 
-const FEATURED_PROJECTS = [
-  {
-    image: "/brinda-logo-purple-illustrations.jpg",
-    category: "Identidad Visual",
-    title: "BRINDA Expo Vinos",
-    description: "Identidad visual completa para la expo de vinos de la region.",
-  },
-  {
-    image: "/longaniza-logo-principal.jpg",
-    category: "Branding Evento",
-    title: "Fiesta de la Longaniza",
-    description: "Marca y material grafico para el festival gastronomico regional.",
-  },
-  {
-    image: "/quinchamali-pattern-black.jpg",
-    category: "Arte y Cultura",
-    title: "Quinchamali",
-    description: "Identidad visual inspirada en la artesania tradicional de Quinchamali.",
-  },
-]
-
 export default function Hero() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -84,7 +62,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="hero" className="relative w-full min-h-screen flex flex-col overflow-hidden">
+      <section id="hero" className="relative w-full h-screen flex items-center overflow-hidden">
         {/* Background slides */}
         <div className="absolute inset-0">
           {SLIDES.map((slide, index) => (
@@ -111,7 +89,7 @@ export default function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-4 sm:px-8 lg:px-12 pt-28 pb-8">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-8 lg:px-12">
           {/* Badge */}
           <div className="fade-in mb-6">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium">
@@ -127,12 +105,12 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="fade-in-delay-1 text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl mb-8 leading-relaxed">
+          <p className="fade-in-delay-1 text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed">
             {"Somos la agencia que da vida a tus proyectos. Desde identidad visual hasta campanas publicitarias completas, hacemos que tu marca destaque."}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="fade-in-delay-2 flex flex-wrap gap-4 mb-12">
+          {/* CTA Button */}
+          <div className="fade-in-delay-2 mb-12">
             <button
               onClick={() => setShowQuoteModal(true)}
               className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-white font-bold rounded-xl hover:bg-secondary/90 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
@@ -140,12 +118,6 @@ export default function Hero() {
               Cotiza tu proyecto
               <ArrowRight className="w-5 h-5" />
             </button>
-            <Link
-              href="/portafolio"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-black transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
-            >
-              Ver portafolio
-            </Link>
           </div>
 
           {/* Slide indicators */}
@@ -163,44 +135,6 @@ export default function Hero() {
                   }`}
                 />
               </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Featured project cards */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-8 lg:px-12 pb-8 sm:pb-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {FEATURED_PROJECTS.map((project, index) => (
-              <Link
-                key={index}
-                href="/portafolio"
-                className={`fade-in-delay-${index + 2} group relative bg-[#1a1a1a]/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all duration-300 hover:-translate-y-1`}
-              >
-                {/* Card image */}
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Arrow button */}
-                  <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-secondary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <ArrowUpRight className="w-5 h-5 text-white" />
-                  </div>
-                  {/* Category badge */}
-                  <div className="absolute bottom-3 left-3">
-                    <span className="px-3 py-1 rounded-full bg-secondary/90 text-white text-xs font-semibold">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-                {/* Card content */}
-                <div className="p-4 sm:p-5">
-                  <h3 className="text-white font-bold text-base sm:text-lg mb-1">{project.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{project.description}</p>
-                </div>
-              </Link>
             ))}
           </div>
         </div>

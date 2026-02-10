@@ -22,22 +22,7 @@ const projects = [
       "/brinda-vineyard-illustration.jpg",
     ],
   },
-  {
-    id: "longaniza",
-    name: "Fiesta de la Longaniza",
-    category: "Branding Evento",
-    year: "2024",
-    color: "#F97316",
-    description: "Identidad visual y senaletica para el festival gastronomico mas tradicional de Chillan.",
-    images: [
-      "/longaniza-logo-principal.jpg",
-      "/longaniza-paleta-colores.jpg",
-      "/longaniza-layout-general.jpg",
-      "/longaniza-layout-map.jpg",
-      "/longaniza-cups-collection.jpg",
-      "/longaniza-crowd-night.jpg",
-    ],
-  },
+
   {
     id: "quinchamali",
     name: "Quinchamali",
@@ -66,7 +51,7 @@ const projects = [
   },
 ]
 
-const categories = ["Todos", "Identidad Visual", "Branding Evento", "Identidad Cultural", "Branding Producto"]
+const categories = ["Todos", "Identidad Visual", "Identidad Cultural", "Branding Producto"]
 
 export default function PortafolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("Todos")

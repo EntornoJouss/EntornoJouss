@@ -15,16 +15,7 @@ const portfolioSlides = [
     { id: 5, title: "BRINDA - Copas Personalizadas", image: "/brinda-wine-glasses.jpg", category: "BRINDA" },
     { id: 6, title: "BRINDA - Ilustración Viñedo", image: "/brinda-vineyard-illustration.jpg", category: "BRINDA" },
   ],
-  // Slide 2: Fiesta de la Longaniza (Gama naranja/rojo)
-  [
-    { id: 7, title: "Longaniza - Logo Principal", image: "/longaniza-logo-principal.jpg", category: "LONGANIZA" },
-    { id: 8, title: "Longaniza - Paleta de Colores", image: "/longaniza-paleta-colores.jpg", category: "LONGANIZA" },
-    { id: 9, title: "Longaniza - Layout General", image: "/longaniza-layout-general.jpg", category: "LONGANIZA" },
-    { id: 10, title: "Longaniza - Layout del Mapa", image: "/longaniza-layout-map.jpg", category: "LONGANIZA" },
-    { id: 11, title: "Longaniza - Vasos Corporativos", image: "/longaniza-cups-collection.jpg", category: "LONGANIZA" },
-    { id: 12, title: "Longaniza - Evento Masivo", image: "/longaniza-crowd-night.jpg", category: "LONGANIZA" },
-  ],
-  // Slide 3: Quinchamali y Um Cafe (Gama tierra/negro/verde)
+  // Slide 2: Quinchamali y Um Cafe (Gama tierra/negro/verde)
   [
     { id: 13, title: "Quinchamalí - Patrón Ilustraciones", image: "/quinchamali-pattern-black.jpg", category: "QUINCHAMALI" },
     { id: 14, title: "Quinchamalí - Logo Decorativo", image: "/quinchamali-logo-framed.jpg", category: "QUINCHAMALI" },

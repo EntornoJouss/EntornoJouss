@@ -34,8 +34,8 @@ const PUZZLE_IMAGES = [
     name: "Quinchamalí",
   },
   {
-    src: "/longaniza-layout-map.jpg",
-    name: "Fiesta de la Longaniza",
+    src: "/um-cafe-brand-board.jpg",
+    name: "Um Cafe",
   },
 ]
 
