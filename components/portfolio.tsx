@@ -64,7 +64,7 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 mb-10 sm:mb-16 fade-in text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-foreground font-bold font-serif">Portafolio</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-foreground font-bold font-sans">Portafolio</h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl">
             Proyectos que hemos desarrollado con pasion y creatividad
           </p>
