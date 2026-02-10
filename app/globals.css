@@ -32,10 +32,10 @@
   --sidebar: #ffffff;
   --sidebar-foreground: rgb(86, 86, 86);
   --sidebar-primary: rgb(65, 64, 64);
-  --sidebar-primary-foreground: rgb(27, 27, 27);
-  --sidebar-accent: rgb(39, 39, 39);
-  --sidebar-accent-foreground: #1a1a18;
-  --sidebar-border: rgb(63, 61, 61);
+  --sidebar-primary-foreground: rgb(219, 219, 219);
+  --sidebar-accent: rgb(255, 255, 255);
+  --sidebar-accent-foreground: rgb(255, 255, 255);
+  --sidebar-border: rgb(255, 255, 255);
   --sidebar-ring: #2d5016;
 }
 
