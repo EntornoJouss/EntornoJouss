@@ -17,7 +17,7 @@
   --muted: rgb(238, 238, 238);
   --muted-foreground: rgb(53, 53, 49);
   --accent: rgb(170, 170, 170);
-  --accent-foreground: #1a1a18;
+  --accent-foreground: rgb(255, 255, 255);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: rgb(129, 129, 129);
