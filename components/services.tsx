@@ -76,7 +76,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center leading-3 border-muted">
           {services.map((service, index) => {
             const Icon = service.icon
             const colorClass = {
@@ -114,7 +114,7 @@ export default function Services() {
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 p-5">
+                  <div className="relative z-10 p-5 leading-[1.6rem] font-serif">
                     <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
@@ -124,7 +124,7 @@ export default function Services() {
                   </div>
 
                   {/* Border glow effect */}
-                  <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
+                  <div className="absolute inset-0 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300 border-0 leading-3" />
                 </div>
               </div>
             )
