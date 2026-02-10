@@ -3,11 +3,11 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-import { Inter, Playfair_Display, Barlow as V0_Font_Barlow, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Inter, Playfair_Display, Arimo as V0_Font_Arimo, Slabo_27px as V0_Font_Slabo_27px } from 'next/font/google'
 
 // Initialize fonts
-const _barlow = V0_Font_Barlow({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
+const _arimo = V0_Font_Arimo({ subsets: ['latin'], weight: ["400","500","600","700"] })
+const _slabo_27px = V0_Font_Slabo_27px({ subsets: ['latin'], weight: ["400"] })
 
 // Initialize fonts with latin-ext for ñ support
 const inter = Inter({ 
