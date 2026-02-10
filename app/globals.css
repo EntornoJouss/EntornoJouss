@@ -75,7 +75,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Catamaran', 'Catamaran Fallback';
+  --font-sans: 'Barlow', 'Barlow Fallback';
   --font-mono: 'Courier New', monospace;
   --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
   --color-background: var(--background);
