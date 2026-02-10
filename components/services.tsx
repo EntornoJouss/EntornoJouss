@@ -124,7 +124,7 @@ export default function Services() {
                   </div>
 
                   {/* Border glow effect */}
-                  <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300" />
+                  <div className="absolute inset-0 border-primary/0 group-hover:border-primary/50 rounded-2xl transition-all duration-300 border-0" />
                 </div>
               </div>
             )
