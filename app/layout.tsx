@@ -3,10 +3,10 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-import { Inter, Playfair_Display, Assistant as V0_Font_Assistant, Lora as V0_Font_Lora } from 'next/font/google'
+import { Inter, Playfair_Display, Catamaran as V0_Font_Catamaran, Lora as V0_Font_Lora } from 'next/font/google'
 
 // Initialize fonts
-const _assistant = V0_Font_Assistant({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800"] })
+const _catamaran = V0_Font_Catamaran({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _lora = V0_Font_Lora({ subsets: ['latin'], weight: ["400","500","600","700"] })
 
 // Initialize fonts with latin-ext for ñ support

@@ -75,7 +75,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Assistant', 'Assistant Fallback';
+  --font-sans: 'Catamaran', 'Catamaran Fallback';
   --font-mono: 'Courier New', monospace;
   --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
   --color-background: var(--background);
